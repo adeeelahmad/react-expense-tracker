@@ -1,5 +1,6 @@
 import React, {useState, useContext} from 'react'
 import { GlobalContext } from '../context/GlobalState';
+import AddIcon from '@material-ui/icons/Add';
 
 export const AddTransaction = () => {
   const [text, setText] = useState('');
@@ -21,6 +22,7 @@ export const AddTransaction = () => {
 
   return (
     <>
+      
       <h3>Add new transaction</h3>
       <form onSubmit={onSubmit}>
         <div className="form-control">
@@ -34,7 +36,7 @@ export const AddTransaction = () => {
           >
           <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="Enter amount..." />
         </div>
-        <button className="btn">Add transaction</button>
+        <button className="btn"><AddIcon /> <br></br>Add transaction</button>
       </form>
     </>
   )

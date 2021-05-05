@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { GlobalContext } from '../context/GlobalState';
+import AccountBalanceIcon from '@material-ui/icons/AccountBalance';
 
 //Money formatter function
 function moneyFormatter(num) {
@@ -26,6 +27,7 @@ export const Balance = () => {
 
   return (
     <>
+      <AccountBalanceIcon />
       <h4>Your Balance</h4>
     <h1>{moneyFormatter(total)}</h1>
     </>
